@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Chat Service regression Tests">
+	<parameter name="app-session" value="false" />
+	<parameter name="returning-user" value="false" />
+	<parameter name="android-version" value="5.1" />
+	<parameter name="app-name" value="paylater-full-stagingv3.2.1aproguard.apk" />
+	<parameter name="app-version" value="Version 3.2.1" />
+	<parameter name="country" value="Nigeria" />
+	<parameter name="port-number" value="4723" />
+	<parameter name="deviceId" value="emulator-5554" /> <!-- TECNO_L8: 01H805X680102293, generic_x86_64: emulator-5554 -->
+
+
+<!-- 
+	<test name="Chat Service Test">
+		<parameter name="TestMode" value="Chat Service Test" />
+		<parameter name="app-session" value="false" />
+		<parameter name="PhoneNumber" value="01224567890" />
+		<parameter name="PIN" value="1234" />
+
+		<classes>
+			<class name="functionalTests.ChatService" />
+		</classes>
+	</test>
+	
+	<test name="Chat Service Test - Loan Status">
+		<parameter name="TestMode" value="Chat Service Test - Loan Status" />
+		<parameter name="app-session" value="true" />
+		<parameter name="PhoneNumber" value="01224567890" />
+		<parameter name="PIN" value="1234" />
+
+		<classes>
+			<class name="functionalTests.ChatService" />
+		</classes>
+	</test>
+	
+	<test name="Chat Service Test - Loan History">
+		<parameter name="TestMode" value="Chat Service Test - Loan Status" />
+		<parameter name="app-session" value="true" />
+		<parameter name="PhoneNumber" value="01224567890" />
+		<parameter name="PIN" value="1234" />
+
+		<classes>
+			<class name="functionalTests.ChatService" />
+		</classes>
+	</test>
+
+	<test name="Chat Service Test - Referral Page">
+		<parameter name="TestMode" value="Chat Service Test - Referral Page" />
+		<parameter name="app-session" value="true" />
+		<parameter name="PhoneNumber" value="01224567890" />
+		<parameter name="PIN" value="1234" />
+
+		<classes>
+			<class name="functionalTests.ChatService" />
+		</classes>
+	</test>
+
+	<test name="Chat Service Test - Manage Cards">
+		<parameter name="TestMode" value="Chat Service Test - Manage Cards" />
+		<parameter name="app-session" value="true" />
+		<parameter name="PhoneNumber" value="01224567890" />
+		<parameter name="PIN" value="1234" />
+
+		<classes>
+			<class name="functionalTests.ChatService" />
+		</classes>
+	</test>
+
+	<test name="Chat Service Test - Contact Us">
+		<parameter name="TestMode" value="Chat Service Test - Contact Us" />
+		<parameter name="app-session" value="true" />
+		<parameter name="PhoneNumber" value="01224567890" />
+		<parameter name="PIN" value="1234" />
+
+		<classes>
+			<class name="functionalTests.ChatService" />
+		</classes>
+	</test>
+-->
+
+<test name="Chat Service Test - Card Detail">
+		<parameter name="TestMode" value="Chat Service Test - Card Detail" />
+		<parameter name="app-session" value="true" />
+		<parameter name="PhoneNumber" value="01224567890" />
+		<parameter name="PIN" value="1234" />
+
+		<classes>
+			<class name="functionalTests.ChatService" />
+		</classes>
+	</test>
+
+</suite>	

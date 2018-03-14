@@ -1,0 +1,266 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+
+<suite name="Functional Tests">
+	<parameter name="app-session" value="false" />
+	<parameter name="returning-user" value="false" />
+	<parameter name="android-version" value="5.1" />
+	<test name="SignUp">
+		<classes>
+			<class name="functionalTests.SignUp" />
+		</classes>
+	</test>
+
+	<test name="Log in & Log Out">
+		<parameter name="app-session" value="false" />
+		<classes>
+			<class name="functionalTests.LogOut" />
+		</classes>
+	</test>
+
+	<test name="Forgot PIN">
+		<parameter name="app-session" value="false" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="android-version" value="5.1" />
+		<classes>
+			<class name="functionalTests.ForgotPin" />
+		</classes>
+	</test>
+
+	<test name="Unlock App">
+		<parameter name="app-session" value="false" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="android-version" value="5.1" />
+		<classes>
+			<class name="functionalTests.UnlockApp" />
+		</classes>
+	</test>
+
+	<test name="ForgotPinLockScreen">
+		<parameter name="android-version" value="5.1" />
+		<parameter name="app-session" value="false" />
+		<classes>
+			<class name="functionalTests.ForgotPinLockScreen" />
+		</classes>
+	</test>
+	<test name="Login & Loan Application">
+		<parameter name="app-session" value="false" />
+		<parameter name="edit-details" value="true" />
+		<classes>
+			<class name="functionalTests.LoanApplication" />
+		</classes>
+	</test>
+</suite>
+
+<suite name="Login Regression Tests">
+	<test name="Login with no data Test">
+		<parameter name="TestMode" value="Login with no data test" />
+		<parameter name="app-session" value="false" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="android-version" value="5.1" />
+		<parameter name="PhoneNumber" value="08039414600" />
+		<parameter name="PIN" value="1234" />
+		<classes>
+			<class name="functionalTests.PhoneLoginParameterized" />
+		</classes>
+	</test>
+	<test name="Login with saved session Test">
+		<parameter name="TestMode" value="Login with saved user data test" />
+		<parameter name="app-session" value="true" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="android-version" value="5.1" />
+		<parameter name="PhoneNumber" value="08039414600" />
+		<parameter name="PIN" value="1234" />
+		<classes>
+			<class name="functionalTests.PhoneLoginParameterized" />
+		</classes>
+	</test>
+	<test name="Returning User Login Test">
+		<parameter name="TestMode" value="Login with another user test" />
+		<parameter name="app-session" value="true" />
+		<parameter name="returning-user" value="true" />
+		<parameter name="android-version" value="5.1" />
+		<parameter name="PhoneNumber" value="01224567890" />
+		<parameter name="PIN" value="1234" />
+		<classes>
+			<class name="functionalTests.PhoneLoginParameterized" />
+		</classes>
+	</test>
+</suite>
+
+<suite name="UpdateProfile Regression Tests">
+	<parameter name="app-session" value="false" />
+	<parameter name="new-user" value="true" />
+	<parameter name="android-version" value="5.1" />
+
+
+	<test name="UpdateProfile for Active User">
+		<parameter name="TestMode" value="Active User" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="PhoneNumber" value="08039414600" />
+		<parameter name="PIN" value="1234" />
+		<parameter name="FirstName" value="Bayo" />
+		<parameter name="MiddleName" value="" />
+		<parameter name="Day" value="22" />
+		<parameter name="Month" value="Jan" />
+		<parameter name="Year" value="1989" />
+		<parameter name="PhoneNumberExisting" value="" />
+		<parameter name="PhoneNumberUpdate" value="08138127656" />
+		<parameter name="EmailExisting" value="" />
+		<parameter name="Email" value="" />
+
+		<classes>
+			<class name="functionalTests.UpdateProfile" />
+		</classes>
+	</test>
+	<test name="UpdateProfile for Inactive User">
+		<parameter name="TestMode" value="Inactive User" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="PhoneNumber" value="01111111118" />
+		<parameter name="PIN" value="1111" />
+		<parameter name="FirstName" value="" />
+		<parameter name="MiddleName" value="" />
+		<parameter name="Day" value="22" />
+		<parameter name="Month" value="Jan" />
+		<parameter name="Year" value="1989" />
+		<parameter name="PhoneNumberExisting" value="" />
+		<parameter name="PhoneNumberUpdate" value="08138127656" />
+		<parameter name="EmailExisting" value="" />
+		<parameter name="Email" value="" />
+
+		<classes>
+			<class name="functionalTests.UpdateProfile" />
+		</classes>
+	</test>
+	<test name="UpdateProfile with Exisiting Phone number">
+		<parameter name="TestMode" value="Existing Phone Number Update Test" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="PhoneNumber" value="08039414600" />
+		<parameter name="PIN" value="1234" />
+		<parameter name="FirstName" value="" />
+		<parameter name="MiddleName" value="" />
+		<parameter name="Day" value="" />
+		<parameter name="Month" value="" />
+		<parameter name="Year" value="" />
+		<parameter name="PhoneNumberExisting" value="01224567890" />
+		<parameter name="PhoneNumberUpdate" value="" />
+		<parameter name="EmailExisting" value="" />
+		<parameter name="Email" value="kunle.oduwobi3@gmail.com" />
+
+		<classes>
+			<class name="functionalTests.UpdateProfile" />
+		</classes>
+	</test>
+
+	<test name="UpdateProfile for Exisiting Email ">
+		<parameter name="TestMode" value="Existing Email Update Test" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="PhoneNumber" value="08039414600" />
+		<parameter name="PIN" value="1234" />
+		<parameter name="FirstName" value="" />
+		<parameter name="MiddleName" value="" />
+		<parameter name="Day" value="" />
+		<parameter name="Month" value="" />
+		<parameter name="Year" value="" />
+		<parameter name="PhoneNumberExisting" value="" />
+		<parameter name="PhoneNumberUpdate" value="" />
+		<parameter name="EmailExisting" value="kunle.oduwobi4@gmail.com" />
+		<parameter name="Email" value="kunle.oduwobi3@gmail.com" />
+		<classes>
+			<class name="functionalTests.UpdateProfile" />
+		</classes>
+	</test>
+
+</suite>
+
+<suite name="Loan Status Regression Tests">
+	<parameter name="app-session" value="false" />
+	<parameter name="android-version" value="5.1" />
+
+	<test name="Pending">
+		<parameter name="TestMode" value="Pending" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="PhoneNumber" value="08990000010" />
+		<parameter name="PIN" value="1111" />
+
+		<classes>
+			<class name="functionalTests.LoanStatus" />
+		</classes>
+	</test>
+
+	<test name="Declined">
+		<parameter name="TestMode" value="Declined" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="PhoneNumber" value="08990000012" />
+		<parameter name="PIN" value="1111" />
+
+		<classes>
+			<class name="functionalTests.LoanStatus" />
+		</classes>
+	</test>
+
+	<test name="Approved">
+		<parameter name="TestMode" value="Approved" />
+		<parameter name="returning-user" value="true" />
+		<parameter name="PhoneNumber" value="08990000013" />
+		<parameter name="PIN" value="1111" />
+
+		<classes>
+			<class name="functionalTests.LoanStatus" />
+		</classes>
+	</test>
+
+	<test name="Disbursed">
+		<parameter name="TestMode" value="Disbursed" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="PhoneNumber" value="08990000018" />
+		<parameter name="PIN" value="1111" />
+
+		<classes>
+			<class name="functionalTests.LoanStatus" />
+		</classes>
+	</test>
+
+	<test name="Overdue">
+		<parameter name="TestMode" value="Overdue" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="PhoneNumber" value="08990000014" />
+		<parameter name="PIN" value="1111" />
+
+		<classes>
+			<class name="functionalTests.LoanStatus" />
+		</classes>
+	</test>
+
+	<test name="Paid">
+		<parameter name="TestMode" value="Paid" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="PhoneNumber" value="08990000011" />
+		<parameter name="PIN" value="1111" />
+
+		<classes>
+			<class name="functionalTests.LoanStatus" />
+		</classes>
+	</test>
+
+</suite>
+
+
+<suite name="Data Driven Tests">
+	<test name="SignUp Data-Driven Test">
+		<classes>
+			<class name="functionalTests.SignUpDataDriven" />
+		</classes>
+	</test>
+	<test name="Login Data Driven Test">
+		<classes>
+			<class name="functionalTests.PhoneLoginDataDriven" />
+		</classes>
+	</test>
+	<test name="Forgot PIN Data-Driven">
+		<classes>
+			<class name="functionalTests.ForgotPinDataDriven" />
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Login Regression Tests">
+	<parameter name="android-version" value="5.1" />
+	<parameter name="app-name" value="paylater-full-stagingv3.2.1aproguard.apk" />
+	<parameter name="app-version" value="Version 3.2.1" />
+	<parameter name="country" value="Nigeria" />
+	<parameter name="port-number" value="4723" />
+	<parameter name="deviceId" value="emulator-5554" /> <!-- TECNO_L8: 01H805X680102293, generic_x86_64: emulator-5554 -->
+	
+
+	<test name="Login with invalid credentials">
+		<parameter name="TestMode" value="Login with invalid credentials" />
+		<parameter name="app-session" value="false" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="PhoneNumber" value="01224567890" />
+		<parameter name="PIN" value="1235" />
+		<classes>
+			<class name="functionalTests.PhoneLoginParameterized" />
+		</classes>
+	</test>
+
+	<test name="Login with no data Test">
+		<parameter name="TestMode" value="Login_With_No_Data_Test" />
+		<parameter name="app-session" value="false" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="PhoneNumber" value="01224567890" />
+		<parameter name="PIN" value="1234" />
+		<classes>
+			<class name="functionalTests.PhoneLoginParameterized" />
+		</classes>
+	</test>
+
+	<test name="Login with saved session Test">
+		<parameter name="TestMode" value="Login_with_saved_user_data_test" />
+		<parameter name="app-session" value="true" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="PhoneNumber" value="01224567890" />
+		<parameter name="PIN" value="1234" />
+		<classes>
+			<class name="functionalTests.PhoneLoginParameterized" />
+		</classes>
+	</test>
+
+	<test name="Login with saved session Test - invalid credentials">
+		<parameter name="TestMode"
+			value="Login with saved session Test - invalid credentials" />
+		<parameter name="app-session" value="true" />
+		<parameter name="returning-user" value="false" />
+		<parameter name="PhoneNumber" value="01224567890" />
+		<parameter name="PIN" value="1235" />
+		<classes>
+			<class name="functionalTests.PhoneLoginParameterized" />
+		</classes>
+	</test>
+
+	<test name="Returning User Login Test">
+		<parameter name="TestMode" value="Login_with_another_user_test" />
+		<parameter name="app-session" value="true" />
+		<parameter name="returning-user" value="true" />
+		<parameter name="PhoneNumber" value="01111111115" />
+		<parameter name="PIN" value="1111" />
+		<classes>
+			<class name="functionalTests.PhoneLoginParameterized" />
+		</classes>
+	</test>
+
+
+
+
+</suite>
